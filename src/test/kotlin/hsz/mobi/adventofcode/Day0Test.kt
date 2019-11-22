@@ -1,13 +1,13 @@
-package hsz.mobi.adventofcode.aoc2019
+package hsz.mobi.adventofcode
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 
-class Day01Test {
+class Day0Test {
     @Test
     fun `Part 1`() {
-        val day = Day01()
+        val day = Day0()
 
         assertThat(day.part1("")).isEqualTo(0)
 
@@ -16,7 +16,7 @@ class Day01Test {
 
     @Test
     fun `Part 2`() {
-        val day = Day01()
+        val day = Day0()
 
         assertThat(day.part2("")).isEqualTo(0)
 
