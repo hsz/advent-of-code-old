@@ -17,7 +17,7 @@ class Day05 : Day(2015, 5) {
 
     override fun part2(input: String) = process(input, """(..).*\1""", """(.).\1""")
 
-    fun process(input: String, vararg patterns: String) = input.split('\n').sumBy {
+    private fun process(input: String, vararg patterns: String) = input.split('\n').sumBy {
         map(patterns.fold(true) { acc, v -> acc && v.toRegex().containsMatchIn(it) })
     }
 }
