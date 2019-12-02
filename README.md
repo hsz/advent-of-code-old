@@ -8,9 +8,9 @@ Below there is a quick list of all available solutions:
 
 ### 2019
  
-| Day | Name         | Solution              |
-|:---:| ------------ |:---------------------:|
-| 01  | [ ][2019.01] | [:star:][2019.01.src] |
+| Day | Name                                                | Solution              |
+|:---:| --------------------------------------------------- |:---------------------:|
+| 01  | [The Tyranny of the Rocket Equation][2019.01]       | [:star:][2019.01.src] |
 
 
 [2019.01]: http://adventofcode.com/2019/day/1

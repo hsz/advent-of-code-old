@@ -32,8 +32,8 @@ class Day06 : Day(2015, 6) {
         }
     }
 
-    private fun process(input: String, callback: (op: OP, value: Int) -> Int) =
-        input.split('\n').fold(mutableMapOf<Int, Int>()) { acc, v ->
+    private fun process(input: String, callback: (OP, Int) -> Int) =
+        input.lines().fold(mutableMapOf<Int, Int>()) { acc, v ->
             val op = valueOf("on|off|toggle".toRegex().find(v)!!.value.toUpperCase())
             val (x1, y1, x2, y2) = v.replace("""\D+""".toRegex(), " ").trim().split(' ').map(String::toInt)
 

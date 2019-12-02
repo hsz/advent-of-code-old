@@ -1,7 +1,6 @@
 package hsz.mobi.adventofcode.aoc2015
 
 import org.assertj.core.api.Assertions.assertThat
-import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 
 class Day05Test {
