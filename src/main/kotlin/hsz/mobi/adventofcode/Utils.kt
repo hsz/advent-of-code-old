@@ -8,7 +8,7 @@ object Utils {
         if (test(i)) generateUntil(i + 1, test) else i
 }
 
-fun IntRange.permutation(): Sequence<Pair<Int, Int>> = sequence {
+fun IntRange.permutation() = sequence {
     this@permutation.forEach { x ->
         this@permutation.forEach { y ->
             yield(x to y)
