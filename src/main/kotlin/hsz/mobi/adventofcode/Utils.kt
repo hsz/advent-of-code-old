@@ -7,3 +7,11 @@ object Utils {
     tailrec fun generateUntil(i: Int = 1, test: (Int) -> Boolean): Int =
         if (test(i)) generateUntil(i + 1, test) else i
 }
+
+fun IntRange.permutation(): Sequence<Pair<Int, Int>> = sequence {
+    this@permutation.forEach { x ->
+        this@permutation.forEach { y ->
+            yield(x to y)
+        }
+    }
+}

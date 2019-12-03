@@ -11,11 +11,14 @@ Below there is a quick list of all available solutions:
 | Day | Name                                                | Solution              |
 |:---:| --------------------------------------------------- |:---------------------:|
 | 01  | [The Tyranny of the Rocket Equation][2019.01]       | [:star:][2019.01.src] |
+| 02  | [1202 Program Alarm][2019.02]                       | [:star:][2019.02.src] |
 
 
 [2019.01]: http://adventofcode.com/2019/day/1
+[2019.02]: http://adventofcode.com/2019/day/2
 
 [2019.01.src]: ./src/main/kotlin/hsz/mobi/adventofcode/aoc2019/Day01.kt
+[2019.02.src]: ./src/main/kotlin/hsz/mobi/adventofcode/aoc2019/Day02.kt
 
 ### ...
 
