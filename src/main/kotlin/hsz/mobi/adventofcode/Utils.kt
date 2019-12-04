@@ -14,7 +14,7 @@ object Utils {
 /**
  * Creates a sequence with a permutation of the two provided ranges.
  */
-fun Pair<IntRange, IntRange>.permutation() = sequence {
+fun Pair<IntProgression, IntProgression>.permutation() = sequence {
     this@permutation.first.forEach { x ->
         this@permutation.second.forEach { y ->
             yield(x to y)
