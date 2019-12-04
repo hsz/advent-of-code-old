@@ -2,6 +2,7 @@ package hsz.mobi.adventofcode.aoc2015
 
 import hsz.mobi.adventofcode.Day
 import hsz.mobi.adventofcode.Utils
+import hsz.mobi.adventofcode.plus
 
 /**
  * Advent of Code 2015
@@ -18,6 +19,4 @@ class Day03 : Day(2015, 3) {
 
     override fun part2(input: String) =
         input.fold(listOf(0 to 0, 0 to 0)) { acc, c -> acc + (acc[acc.size - 2] + map(c)) }.distinct().size
-
-    private operator fun Pair<Int, Int>.plus(p: Pair<Int, Int>) = first + p.first to second + p.second
 }
