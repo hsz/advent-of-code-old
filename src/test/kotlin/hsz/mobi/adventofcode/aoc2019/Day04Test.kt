@@ -8,7 +8,7 @@ class Day04Test {
     fun `Part 1`() {
         val day = Day04()
 
-        assertThat(day.part1("111111-111111")).isEqualTo(1)
+        assertThat(day.part1("111111-111111")).isEqualTo(9)
         assertThat(day.part1("223450-223450")).isEqualTo(0)
         assertThat(day.part1("123789-123789")).isEqualTo(0)
 
