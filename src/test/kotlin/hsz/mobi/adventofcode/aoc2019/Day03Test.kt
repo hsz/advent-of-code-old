@@ -1,11 +1,14 @@
 package hsz.mobi.adventofcode.aoc2019
 
 import org.assertj.core.api.Assertions.assertThat
+import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 
+@DisplayName("Advent of Code 2019, Day 3: Crossed Wires")
 class Day03Test {
     @Test
-    fun `Part 1`() {
+    @DisplayName("Part 1")
+    fun part1() {
         val day = Day03()
 
         assertThat(
@@ -31,7 +34,8 @@ class Day03Test {
     }
 
     @Test
-    fun `Part 2`() {
+    @DisplayName("Part 2")
+    fun part2() {
         val day = Day03()
 
         assertThat(

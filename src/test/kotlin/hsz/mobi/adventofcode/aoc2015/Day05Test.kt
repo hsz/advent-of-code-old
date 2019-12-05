@@ -1,11 +1,14 @@
 package hsz.mobi.adventofcode.aoc2015
 
 import org.assertj.core.api.Assertions.assertThat
+import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 
+@DisplayName("Advent of Code 2015, Day 5: Doesn't He Have Intern-Elves For This?")
 class Day05Test {
     @Test
-    fun `Part 1`() {
+    @DisplayName("Part 1")
+    fun part1() {
         val day = Day05()
 
         assertThat(day.part1("ugknbfddgicrmopn")).isEqualTo(1)
@@ -18,7 +21,8 @@ class Day05Test {
     }
 
     @Test
-    fun `Part 2`() {
+    @DisplayName("Part 2")
+    fun part2() {
         val day = Day05()
 
         assertThat(day.part2("qjhvhtzxzqqjkmpb")).isEqualTo(1)

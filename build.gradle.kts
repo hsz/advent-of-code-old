@@ -2,6 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     kotlin("jvm") version "1.3.50"
+    id("com.adarshr.test-logger") version "2.0.0"
 }
 
 group = "mobi.hsz"

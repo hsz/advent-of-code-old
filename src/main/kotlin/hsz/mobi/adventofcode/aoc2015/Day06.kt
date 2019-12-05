@@ -12,7 +12,7 @@ import hsz.mobi.adventofcode.permutation
  *
  * Day 06: Probably a Fire Hazard
  *
- * https://adventofcode.com/0/day/0
+ * https://adventofcode.com/2015/day/6
  */
 class Day06 : Day(2015, 6) {
     enum class OP { ON, OFF, TOGGLE }
