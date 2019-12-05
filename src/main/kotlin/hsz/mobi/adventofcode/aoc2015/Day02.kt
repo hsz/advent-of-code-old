@@ -15,6 +15,6 @@ class Day02 : Day(2015, 2) {
     override fun part2(input: String) = process(input) { (a, b, c) -> 2 * a + 2 * b + a * b * c }
 
     private fun process(input: String, callback: (List<Int>) -> Int) = input.lines().sumBy {
-        it.split('x').map { s -> s.toInt() }.sorted().let(callback)
+        it.split('x').map(String::toInt).sorted().let(callback)
     }
 }
