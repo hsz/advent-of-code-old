@@ -12,6 +12,7 @@ Below there is a quick list of all available solutions:
 |  | 03 | [Crossed Wires](http://adventofcode.com/2019/day/3) | [:star:](./src/main/kotlin/mobi/hsz/adventofcode/aoc2019/Day03.kt) |
 |  | 04 | [Secure Container](http://adventofcode.com/2019/day/4) | [:star:](./src/main/kotlin/mobi/hsz/adventofcode/aoc2019/Day04.kt) |
 |  | 05 | [Sunny with a Chance of Asteroids](http://adventofcode.com/2019/day/5) | [:star:](./src/main/kotlin/mobi/hsz/adventofcode/aoc2019/Day05.kt) |
+|  | 06 | [Universal Orbit Map](http://adventofcode.com/2019/day/6) | [:star:](./src/main/kotlin/mobi/hsz/adventofcode/aoc2019/Day06.kt) |
 | **2015** | 01 | [Not Quite Lisp](http://adventofcode.com/2015/day/1) | [:star:](./src/main/kotlin/mobi/hsz/adventofcode/aoc2015/Day01.kt) |
 |  | 02 | [I Was Told There Would Be No Math](http://adventofcode.com/2015/day/2) | [:star:](./src/main/kotlin/mobi/hsz/adventofcode/aoc2015/Day02.kt) |
 |  | 03 | [Perfectly Spherical Houses in a Vacuum](http://adventofcode.com/2015/day/3) | [:star:](./src/main/kotlin/mobi/hsz/adventofcode/aoc2015/Day03.kt) |
@@ -20,4 +21,4 @@ Below there is a quick list of all available solutions:
 |  | 06 | [Probably a Fire Hazard](http://adventofcode.com/2015/day/6) | [:star:](./src/main/kotlin/mobi/hsz/adventofcode/aoc2015/Day06.kt) |
 |  | 07 | [Some Assembly Required](http://adventofcode.com/2015/day/7) | [:star:](./src/main/kotlin/mobi/hsz/adventofcode/aoc2015/Day07.kt) |
 
-Readme generated on Wed Dec 11 16:47:21 UTC 2019
+Readme generated on Wed Dec 11 21:49:31 UTC 2019
