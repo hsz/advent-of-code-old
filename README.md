@@ -20,4 +20,4 @@ Below there is a quick list of all available solutions:
 |  | 06 | [Probably a Fire Hazard](http://adventofcode.com/2015/day/6) | [:star:](./src/main/kotlin/mobi/hsz/adventofcode/aoc2015/Day06.kt) |
 |  | 07 | [Some Assembly Required](http://adventofcode.com/2015/day/7) | [:star:](./src/main/kotlin/mobi/hsz/adventofcode/aoc2015/Day07.kt) |
 
-Readme generated on Tue Dec 10 11:40:58 UTC 2019
+Readme generated on Wed Dec 11 16:47:21 UTC 2019
