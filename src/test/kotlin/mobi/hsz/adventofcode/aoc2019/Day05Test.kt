@@ -11,9 +11,7 @@ class Day05Test {
     fun part1() {
         val day = Day05()
 
-        assertThat(day.part1("")).isEqualTo(0)
-
-        assertThat(day.part1()).isEqualTo(0)
+        assertThat(day.part1()).isEqualTo(6745903)
     }
 
     @Test
@@ -21,8 +19,6 @@ class Day05Test {
     fun part2() {
         val day = Day05()
 
-        assertThat(day.part2("")).isEqualTo(0)
-
-        assertThat(day.part2()).isEqualTo(0)
+        assertThat(day.part2()).isEqualTo(9168267)
     }
 }
