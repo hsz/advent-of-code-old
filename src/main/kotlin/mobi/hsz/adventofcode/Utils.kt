@@ -14,7 +14,7 @@ object Utils {
 /**
  * Creates a sequence with a permutation of the two provided ranges.
  */
-fun Pair<IntProgression, IntProgression>.permutation() = sequence {
+fun <T> Pair<Iterable<T>, Iterable<T>>.permutation() = sequence {
     this@permutation.first.forEach { x ->
         this@permutation.second.forEach { y ->
             yield(x to y)
@@ -23,9 +23,27 @@ fun Pair<IntProgression, IntProgression>.permutation() = sequence {
 }
 
 /**
- * Creates a sequence with a permutation of the provided range.
+ * Creates a sequence with a permutation of the provided iterable.
  */
-fun IntRange.permutation() = (this to this).permutation()
+fun <T> Iterable<T>.permutation() = (this to this).permutation()
+
+/**
+ * Creates a sequence with a permutation of the two provided ranges.
+ */
+fun <T> Triple<Iterable<T>, Iterable<T>, Iterable<T>>.permutation3() = sequence {
+    this@permutation3.first.forEach { x ->
+        this@permutation3.second.forEach { y ->
+            this@permutation3.third.forEach { z ->
+                yield(Triple(x, y, z))
+            }
+        }
+    }
+}
+
+/**
+ * Creates a sequence with a permutation of the provided iterable.
+ */
+fun <T> Iterable<T>.permutation3() = (Triple(this, this, this)).permutation3()
 
 /**
  * Converts string to md5 hash.
