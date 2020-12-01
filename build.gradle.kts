@@ -2,7 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     groovy
-    kotlin("jvm") version "1.3.50"
+    kotlin("jvm") version "1.4.20"
     id("com.adarshr.test-logger") version "2.0.0"
 }
 
