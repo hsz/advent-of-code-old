@@ -10,6 +10,7 @@ import mobi.hsz.adventofcode.Day
  * https://adventofcode.com/2019/day/6
  */
 class Day06 : Day(2019, 6) {
+
     override fun part1(input: String) = process(input).run {
         sumBy { it.size - 1 }
     }

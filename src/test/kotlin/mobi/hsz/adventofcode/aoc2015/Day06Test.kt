@@ -1,21 +1,22 @@
 package mobi.hsz.adventofcode.aoc2015
 
-import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.DisplayName
-import org.junit.jupiter.api.Test
+import kotlin.test.Test
+import kotlin.test.assertEquals
 
 @DisplayName("Advent of Code 2015, Day 06: Probably a Fire Hazard")
 class Day06Test {
+
     @Test
     @DisplayName("Part 1")
     fun part1() {
         val day = Day06()
 
-        assertThat(day.part1("turn on 0,0 through 999,999")).isEqualTo(1000000)
-        assertThat(day.part1("toggle 0,0 through 999,0")).isEqualTo(1000)
-        assertThat(day.part1("turn off 499,499 through 500,500")).isEqualTo(0)
+        assertEquals(day.part1("turn on 0,0 through 999,999"), 1000000)
+        assertEquals(day.part1("toggle 0,0 through 999,0"), 1000)
+        assertEquals(day.part1("turn off 499,499 through 500,500"), 0)
 
-        assertThat(day.part1()).isEqualTo(543903)
+        assertEquals(day.part1(), 543903)
     }
 
     @Test
@@ -23,9 +24,9 @@ class Day06Test {
     fun part2() {
         val day = Day06()
 
-        assertThat(day.part2("turn on 0,0 through 0,0")).isEqualTo(1)
-        assertThat(day.part2("toggle 0,0 through 999,999")).isEqualTo(2000000)
+        assertEquals(day.part2("turn on 0,0 through 0,0"), 1)
+        assertEquals(day.part2("toggle 0,0 through 999,999"), 2000000)
 
-        assertThat(day.part2()).isEqualTo(14687245)
+        assertEquals(day.part2(), 14687245)
     }
 }

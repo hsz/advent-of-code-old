@@ -1,26 +1,27 @@
 package mobi.hsz.adventofcode.aoc2015
 
-import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.DisplayName
-import org.junit.jupiter.api.Test
+import kotlin.test.Test
+import kotlin.test.assertEquals
 
 @DisplayName("Advent of Code 2015, Day 1: Not Quite Lisp")
 class Day01Test {
+
     @Test
     @DisplayName("Part 1")
     fun part1() {
         val day = Day01()
 
-        assertThat(day.part1("(())")).isEqualTo(0)
-        assertThat(day.part1("(((")).isEqualTo(3)
-        assertThat(day.part1("(()(()(")).isEqualTo(3)
-        assertThat(day.part1("))(((((")).isEqualTo(3)
-        assertThat(day.part1("())")).isEqualTo(-1)
-        assertThat(day.part1("))(")).isEqualTo(-1)
-        assertThat(day.part1(")))")).isEqualTo(-3)
-        assertThat(day.part1(")())())")).isEqualTo(-3)
+        assertEquals(day.part1("(())"), 0)
+        assertEquals(day.part1("((("), 3)
+        assertEquals(day.part1("(()(()("), 3)
+        assertEquals(day.part1("))((((("), 3)
+        assertEquals(day.part1("())"), -1)
+        assertEquals(day.part1("))("), -1)
+        assertEquals(day.part1(")))"), -3)
+        assertEquals(day.part1(")())())"), -3)
 
-        assertThat(day.part1()).isEqualTo(280)
+        assertEquals(day.part1(), 280)
     }
 
     @Test
@@ -28,9 +29,9 @@ class Day01Test {
     fun part2() {
         val day = Day01()
 
-        assertThat(day.part2(")")).isEqualTo(1)
-        assertThat(day.part2("()())")).isEqualTo(5)
+        assertEquals(day.part2(")"), 1)
+        assertEquals(day.part2("()())"), 5)
 
-        assertThat(day.part2()).isEqualTo(1797)
+        assertEquals(day.part2(), 1797)
     }
 }

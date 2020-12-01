@@ -1,19 +1,20 @@
 package mobi.hsz.adventofcode
 
-import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.DisplayName
-import org.junit.jupiter.api.Test
+import kotlin.test.Test
+import kotlin.test.assertEquals
 
 @DisplayName("Advent of Code 2019, Day 0:")
 class Day0Test {
+
     @Test
     @DisplayName("Part 1")
     fun part1() {
         val day = Day0()
 
-        assertThat(day.part1("")).isEqualTo(0)
+        assertEquals(day.part1(""), 0)
 
-        assertThat(day.part1()).isEqualTo(0)
+        assertEquals(day.part1(), 0)
     }
 
     @Test
@@ -21,8 +22,8 @@ class Day0Test {
     fun part2() {
         val day = Day0()
 
-        assertThat(day.part2("")).isEqualTo(0)
+        assertEquals(day.part2(""), 0)
 
-        assertThat(day.part2()).isEqualTo(0)
+        assertEquals(day.part2(), 0)
     }
 }

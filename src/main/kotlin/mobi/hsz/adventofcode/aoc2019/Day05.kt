@@ -10,6 +10,7 @@ import mobi.hsz.adventofcode.Day
  * https://adventofcode.com/2019/day/5
  */
 class Day05 : Day(2019, 5) {
+
     // 561 ++++
     override fun part1(input: String) = input.intcode(input = 1).second.last()
 

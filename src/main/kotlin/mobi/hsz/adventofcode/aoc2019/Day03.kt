@@ -12,12 +12,13 @@ import kotlin.math.absoluteValue
  * https://adventofcode.com/2019/day/3
  */
 class Day03 : Day(2019, 3) {
+
     override fun part1(input: String) = process(input).let { (a, b) ->
-        a.intersect(b).map { it.first.absoluteValue + it.second.absoluteValue }.filter { it > 0 }.min()!!
+        a.intersect(b).map { it.first.absoluteValue + it.second.absoluteValue }.filter { it > 0 }.minOrNull()!!
     }
 
     override fun part2(input: String) = process(input).let { (a, b) ->
-        a.intersect(b).map { a.indexOf(it) + b.indexOf(it) + 2 }.min()!!
+        a.intersect(b).map { a.indexOf(it) + b.indexOf(it) + 2 }.minOrNull()!!
     }
 
     private fun process(input: String) = input.lines().map {

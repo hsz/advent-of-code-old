@@ -10,7 +10,8 @@ import mobi.hsz.adventofcode.Day
  * https://adventofcode.com/2015/day/7
  */
 class Day07 : Day(2015, 7) {
-    data class Gate(val a: String, val b: String, val op: String, val dest: String);
+
+    data class Gate(val a: String, val b: String, val op: String, val dest: String)
 
     override fun part1(input: String) = 0
 //    override fun part1(input: String) = input.lines().fold(mutableMapOf<String, Int>()) { acc, v ->

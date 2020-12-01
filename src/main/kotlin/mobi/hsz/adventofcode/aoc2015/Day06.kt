@@ -15,6 +15,7 @@ import mobi.hsz.adventofcode.permutation
  * https://adventofcode.com/2015/day/6
  */
 class Day06 : Day(2015, 6) {
+
     enum class OP { ON, OFF, TOGGLE }
 
     override fun part1(input: String) = process(input) { op, value ->

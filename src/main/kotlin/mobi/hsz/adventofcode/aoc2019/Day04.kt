@@ -10,6 +10,7 @@ import mobi.hsz.adventofcode.Day
  * https://adventofcode.com/2019/day/4
  */
 class Day04 : Day(2019, 4) {
+
     override fun part1(input: String) = process(input) { it.contains("""(\d)\1""".toRegex()) }
 
     override fun part2(input: String) = process(input) {

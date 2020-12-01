@@ -11,6 +11,7 @@ import mobi.hsz.adventofcode.permutation
  * https://adventofcode.com/2019/day/2
  */
 class Day02 : Day(2019, 2) {
+
     override fun part1(input: String) = input.intcode(12, 2).first.first()
 
     override fun part2(input: String) = input.intcode().let {

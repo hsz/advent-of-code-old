@@ -1,36 +1,35 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    groovy
     kotlin("jvm") version "1.4.20"
-    id("com.adarshr.test-logger") version "2.0.0"
 }
 
 group = "mobi.hsz"
 version = "1.0-SNAPSHOT"
 
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    testApi("org.junit.jupiter:junit-jupiter-engine:5.5.2")
-    testImplementation("org.assertj:assertj-core:3.14.0")
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.5.2")
+    implementation(kotlin("stdlib-jdk8"))
+    testImplementation("org.junit.jupiter:junit-jupiter-engine:5.7.0")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.7.0")
+    testImplementation(kotlin("test"))
+    testImplementation(kotlin("test-junit5"))
 }
 
 repositories {
     mavenCentral()
 }
 
-tasks.withType<KotlinCompile> {
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
-}
-
-tasks.withType<Test> {
-    useJUnitPlatform()
-}
-
 tasks {
+    listOf("compileKotlin", "compileTestKotlin").forEach {
+        getByName<KotlinCompile>(it) {
+            kotlinOptions.jvmTarget = "1.8"
+        }
+    }
+
+    withType<Test> {
+        useJUnitPlatform()
+    }
+
     register("readme", Copy::class) {
         val list = project.sourceSets.main.get().allSource.files.filter {
             it.path.contains("""Day\d{2}\.kt$""".toRegex())

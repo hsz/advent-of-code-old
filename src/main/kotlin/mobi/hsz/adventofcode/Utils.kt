@@ -30,7 +30,7 @@ fun IntRange.permutation() = (this to this).permutation()
 /**
  * Converts string to md5 hash.
  */
-fun String.md5() = BigInteger(1, MessageDigest.getInstance("MD5").digest(toByteArray())).toString(16)
+fun String.md5(): String = BigInteger(1, MessageDigest.getInstance("MD5").digest(toByteArray())).toString(16)
 
 /**
  * Sums two pairs of integer values.

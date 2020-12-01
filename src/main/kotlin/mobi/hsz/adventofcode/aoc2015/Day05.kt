@@ -11,6 +11,7 @@ import mobi.hsz.adventofcode.Utils
  * https://adventofcode.com/2015/day/5
  */
 class Day05 : Day(2015, 5) {
+
     val map = Utils.mapper(0, true to 1)
 
     override fun part1(input: String) = process(input, """(.)\1""", """([aeiou].*){3}""", """^((?!ab|cd|pq|xy).)*$""")

@@ -11,6 +11,7 @@ import mobi.hsz.adventofcode.Utils
  * https://adventofcode.com/2015/day/1
  */
 class Day01 : Day(2015, 1) {
+
     val map = Utils.mapper(-1, '(' to 1, 's' to 1)
 
     override fun part1(input: String) = input.map(map).sum()

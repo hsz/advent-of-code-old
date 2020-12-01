@@ -12,6 +12,7 @@ import mobi.hsz.adventofcode.plus
  * https://adventofcode.com/2015/day/3
  */
 class Day03 : Day(2015, 3) {
+
     val map = Utils.mapper(0 to 0, '^' to (0 to 1), '>' to (1 to 0), 'v' to (0 to -1), '<' to (-1 to 0))
 
     override fun part1(input: String) =

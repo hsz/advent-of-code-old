@@ -10,6 +10,7 @@ import mobi.hsz.adventofcode.Day
  * https://adventofcode.com/2019/day/1
  */
 class Day01 : Day(2019, 1) {
+
     override fun part1(input: String) = process(input, List<Int>::first)
 
     override fun part2(input: String) = process(input, List<Int>::sum)

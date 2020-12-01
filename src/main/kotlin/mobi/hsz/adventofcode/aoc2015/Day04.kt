@@ -12,6 +12,7 @@ import mobi.hsz.adventofcode.md5
  * https://adventofcode.com/2015/day/4
  */
 class Day04 : Day(2015, 4) {
+
     override fun part1(input: String) = process(input, 5)
 
     override fun part2(input: String) = process(input, 6)
