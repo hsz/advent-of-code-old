@@ -28,24 +28,6 @@ fun <T> Pair<Iterable<T>, Iterable<T>>.permutation() = sequence {
 fun <T> Iterable<T>.permutation() = (this to this).permutation()
 
 /**
- * Creates a sequence with a permutation of the two provided ranges.
- */
-fun <T> Triple<Iterable<T>, Iterable<T>, Iterable<T>>.permutation3() = sequence {
-    this@permutation3.first.forEach { x ->
-        this@permutation3.second.forEach { y ->
-            this@permutation3.third.forEach { z ->
-                yield(Triple(x, y, z))
-            }
-        }
-    }
-}
-
-/**
- * Creates a sequence with a permutation of the provided iterable.
- */
-fun <T> Iterable<T>.permutation3() = (Triple(this, this, this)).permutation3()
-
-/**
  * Converts string to md5 hash.
  */
 fun String.md5(): String = BigInteger(1, MessageDigest.getInstance("MD5").digest(toByteArray())).toString(16)

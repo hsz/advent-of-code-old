@@ -1,6 +1,6 @@
 package mobi.hsz.adventofcode
 
-abstract class Day(year: Number, day: Number) {
+abstract class Day(val year: Number, val day: Number) {
 
     private var input = Resources.asString("aoc${year}/day${day.toString().padStart(2, '0')}.txt")
 
