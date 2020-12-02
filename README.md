@@ -8,6 +8,7 @@ Below there is a quick list of all available solutions:
 | Year | Day | Name | Solution |
 |:----:|:---:| ---- |:--------:|
 | **2020** | 01 | [Report Repair](http://adventofcode.com/2020/day/1) | [:star:](./src/main/kotlin/mobi/hsz/adventofcode/aoc2020/Day01.kt) |
+|  | 02 | [Password Philosophy](http://adventofcode.com/2020/day/2) | [:star:](./src/main/kotlin/mobi/hsz/adventofcode/aoc2020/Day02.kt) |
 | **2019** | 01 | [The Tyranny of the Rocket Equation](http://adventofcode.com/2019/day/1) | [:star:](./src/main/kotlin/mobi/hsz/adventofcode/aoc2019/Day01.kt) |
 |  | 02 | [1202 Program Alarm](http://adventofcode.com/2019/day/2) | [:star:](./src/main/kotlin/mobi/hsz/adventofcode/aoc2019/Day02.kt) |
 |  | 03 | [Crossed Wires](http://adventofcode.com/2019/day/3) | [:star:](./src/main/kotlin/mobi/hsz/adventofcode/aoc2019/Day03.kt) |
@@ -22,4 +23,4 @@ Below there is a quick list of all available solutions:
 |  | 06 | [Probably a Fire Hazard](http://adventofcode.com/2015/day/6) | [:star:](./src/main/kotlin/mobi/hsz/adventofcode/aoc2015/Day06.kt) |
 |  | 07 | [Some Assembly Required](http://adventofcode.com/2015/day/7) | [:star:](./src/main/kotlin/mobi/hsz/adventofcode/aoc2015/Day07.kt) |
 
-Readme generated on Tue Dec 01 23:45:31 UTC 2020
+Readme generated on Wed Dec 02 21:08:02 UTC 2020
