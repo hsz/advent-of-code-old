@@ -2,6 +2,8 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     kotlin("jvm") version "1.4.20"
+    id("io.gitlab.arturbosch.detekt") version "1.14.2"
+    id("org.jlleitschuh.gradle.ktlint") version "9.4.1"
 }
 
 group = "mobi.hsz"
@@ -12,10 +14,23 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter:5.7.0")
     testImplementation(kotlin("test"))
     testImplementation(kotlin("test-junit5"))
+    detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.14.2")
 }
 
 repositories {
     mavenCentral()
+    jcenter()
+}
+
+detekt {
+    config = files("./detekt-config.yml")
+    buildUponDefaultConfig = true
+
+    reports {
+        html.enabled = false
+        xml.enabled = false
+        txt.enabled = false
+    }
 }
 
 tasks {
