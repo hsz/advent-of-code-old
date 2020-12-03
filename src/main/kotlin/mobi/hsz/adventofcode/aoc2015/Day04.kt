@@ -1,7 +1,7 @@
 package mobi.hsz.adventofcode.aoc2015
 
 import mobi.hsz.adventofcode.Day
-import mobi.hsz.adventofcode.Utils
+import mobi.hsz.adventofcode.generateUntil
 import mobi.hsz.adventofcode.md5
 
 /**
@@ -17,5 +17,5 @@ class Day04 : Day(2015, 4) {
 
     override fun part2(input: String) = process(input, 6)
 
-    private fun process(input: String, zeros: Int) = Utils.generateUntil { "$input${it}".md5().length > 32 - zeros }
+    private fun process(input: String, zeros: Int) = generateUntil { "$input${it}".md5().length > 32 - zeros }
 }

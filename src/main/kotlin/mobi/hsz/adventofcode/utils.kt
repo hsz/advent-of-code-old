@@ -3,13 +3,11 @@ package mobi.hsz.adventofcode
 import java.math.BigInteger
 import java.security.MessageDigest
 
-object Utils {
-    fun <K, V> mapper(defaultValue: V, vararg mapping: Pair<K, V>): (K) -> V =
-        { key -> mapOf(*mapping).getOrDefault(key, defaultValue) }
+fun <K, V> mapper(defaultValue: V, vararg mapping: Pair<K, V>): (K) -> V =
+    { key -> mapOf(*mapping).getOrDefault(key, defaultValue) }
 
-    tailrec fun generateUntil(i: Int = 1, test: (Int) -> Boolean): Int =
-        if (test(i)) generateUntil(i + 1, test) else i
-}
+tailrec fun generateUntil(i: Int = 1, test: (Int) -> Boolean): Int =
+    if (test(i)) generateUntil(i + 1, test) else i
 
 /**
  * Creates a sequence with a permutation of the two provided ranges.

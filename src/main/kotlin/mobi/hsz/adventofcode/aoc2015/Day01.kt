@@ -1,7 +1,7 @@
 package mobi.hsz.adventofcode.aoc2015
 
 import mobi.hsz.adventofcode.Day
-import mobi.hsz.adventofcode.Utils
+import mobi.hsz.adventofcode.mapper
 
 /**
  * Advent of Code 2015
@@ -12,7 +12,7 @@ import mobi.hsz.adventofcode.Utils
  */
 class Day01 : Day(2015, 1) {
 
-    val map = Utils.mapper(-1, '(' to 1, 's' to 1)
+    val map = mapper(-1, '(' to 1, 's' to 1)
 
     override fun part1(input: String) = input.map(map).sum()
 

@@ -1,8 +1,8 @@
 package mobi.hsz.adventofcode.aoc2019
 
-import mobi.hsz.adventofcode.Utils
+import mobi.hsz.adventofcode.mapper
 
-val map = Utils.mapper(1, 1 to 4, 2 to 4, 3 to 2, 4 to 2, 5 to 3, 6 to 3, 7 to 4, 8 to 4)
+val map = mapper(1, 1 to 4, 2 to 4, 3 to 2, 4 to 2, 5 to 3, 6 to 3, 7 to 4, 8 to 4)
 
 fun String.intcode(noun: Int? = null, verb: Int? = null, input: Int = 0): Pair<List<Int>, List<Int>> =
     split(',').map(String::toInt).toMutableList().apply {
