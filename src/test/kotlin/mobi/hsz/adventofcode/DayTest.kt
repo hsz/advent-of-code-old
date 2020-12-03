@@ -6,10 +6,10 @@ import org.junit.jupiter.api.DynamicTest
 open class DayTest(val day: Day) {
 
     fun test(
-        function: Function1<String, Int>,
-        answer: Int,
-        data: Collection<Pair<String, Int>> = emptyList(),
-        custom: Collection<Pair<Int, Int>> = emptyList()
+        function: Function1<String, Number>,
+        answer: Number,
+        data: Collection<Pair<String, Number>> = emptyList(),
+        custom: Collection<Pair<Number, Number>> = emptyList()
     ) =
         data.mapIndexed { index, (testInput, expected) ->
             DynamicTest.dynamicTest("Test case #${index + 1}") {
