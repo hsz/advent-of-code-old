@@ -1,31 +1,31 @@
 package mobi.hsz.adventofcode.aoc2015
 
+import mobi.hsz.adventofcode.DayTest
 import org.junit.jupiter.api.DisplayName
-import kotlin.test.Test
-import kotlin.test.assertEquals
+import org.junit.jupiter.api.TestFactory
 
 @DisplayName("Advent of Code 2015, Day 2: I Was Told There Would Be No Math")
-class Day02Test {
+class Day02Test : DayTest(Day02()) {
 
-    @Test
+    @TestFactory
     @DisplayName("Part 1")
-    fun part1() {
-        val day = Day02()
+    fun part1() = test(
+        function = day::part1,
+        answer = 1586300,
+        data = listOf(
+            "2x3x4" to 58,
+            "1x1x10" to 43,
+        )
+    )
 
-        assertEquals(day.part1("2x3x4"), 58)
-        assertEquals(day.part1("1x1x10"), 43)
-
-        assertEquals(day.part1(), 1586300)
-    }
-
-    @Test
+    @TestFactory
     @DisplayName("Part 2")
-    fun part2() {
-        val day = Day02()
-
-        assertEquals(day.part2("2x3x4"), 34)
-        assertEquals(day.part2("1x1x10"), 14)
-
-        assertEquals(day.part2(), 3737498)
-    }
+    fun part2() = test(
+        function = day::part2,
+        answer = 3737498,
+        data = listOf(
+            "2x3x4" to 34,
+            "1x1x10" to 14,
+        )
+    )
 }

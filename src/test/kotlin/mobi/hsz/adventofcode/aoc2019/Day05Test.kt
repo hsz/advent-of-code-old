@@ -1,25 +1,23 @@
 package mobi.hsz.adventofcode.aoc2019
 
+import mobi.hsz.adventofcode.DayTest
 import org.junit.jupiter.api.DisplayName
-import kotlin.test.Test
-import kotlin.test.assertEquals
+import org.junit.jupiter.api.TestFactory
 
 @DisplayName("Advent of Code 2019, Day 5: Sunny with a Chance of Asteroids")
-class Day05Test {
+class Day05Test : DayTest(Day05()) {
 
-    @Test
+    @TestFactory
     @DisplayName("Part 1")
-    fun part1() {
-        val day = Day05()
+    fun part1() = test(
+        function = day::part1,
+        answer = 6745903,
+    )
 
-        assertEquals(day.part1(), 6745903)
-    }
-
-    @Test
+    @TestFactory
     @DisplayName("Part 2")
-    fun part2() {
-        val day = Day05()
-
-        assertEquals(day.part2(), 9168267)
-    }
+    fun part2() = test(
+        function = day::part2,
+        answer = 9168267,
+    )
 }

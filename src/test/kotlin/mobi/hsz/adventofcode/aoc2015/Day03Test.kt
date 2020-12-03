@@ -1,33 +1,33 @@
 package mobi.hsz.adventofcode.aoc2015
 
+import mobi.hsz.adventofcode.DayTest
 import org.junit.jupiter.api.DisplayName
-import kotlin.test.Test
-import kotlin.test.assertEquals
+import org.junit.jupiter.api.TestFactory
 
 @DisplayName("Advent of Code 2015, Day 3: Perfectly Spherical Houses in a Vacuum")
-class Day03Test {
+class Day03Test : DayTest(Day03()) {
 
-    @Test
+    @TestFactory
     @DisplayName("Part 1")
-    fun part1() {
-        val day = Day03()
+    fun part1() = test(
+        function = day::part1,
+        answer = 2572,
+        data = listOf(
+            ">" to 2,
+            "^>v<" to 4,
+            "^v^v^v^v^v" to 2,
+        )
+    )
 
-        assertEquals(day.part1(">"), 2)
-        assertEquals(day.part1("^>v<"), 4)
-        assertEquals(day.part1("^v^v^v^v^v"), 2)
-
-        assertEquals(day.part1(), 2572)
-    }
-
-    @Test
+    @TestFactory
     @DisplayName("Part 2")
-    fun part2() {
-        val day = Day03()
-
-        assertEquals(day.part2("^v"), 3)
-        assertEquals(day.part2("^>v<"), 3)
-        assertEquals(day.part2("^v^v^v^v^v"), 11)
-
-        assertEquals(day.part2(), 2631)
-    }
+    fun part2() = test(
+        function = day::part2,
+        answer = 2631,
+        data = listOf(
+            "^v" to 3,
+            "^>v<" to 3,
+            "^v^v^v^v^v" to 11,
+        )
+    )
 }

@@ -1,28 +1,30 @@
 package mobi.hsz.adventofcode.aoc2015
 
+import mobi.hsz.adventofcode.DayTest
 import org.junit.jupiter.api.DisplayName
-import kotlin.test.Test
-import kotlin.test.assertEquals
+import org.junit.jupiter.api.TestFactory
 
 @DisplayName("Advent of Code 2015, Day 4: The Ideal Stocking Stuffer")
-class Day04Test {
+class Day04Test : DayTest(Day04()) {
 
-    @Test
+    @TestFactory
     @DisplayName("Part 1")
-    fun part1() {
-        val day = Day04()
+    fun part1() = test(
+        function = day::part1,
+        answer = 254575,
+        data = listOf(
+            "abcdef" to 609043,
+            "pqrstuv" to 1048970,
+        )
+    )
 
-        assertEquals(day.part1("abcdef"), 609043)
-        assertEquals(day.part1("pqrstuv"), 1048970)
-
-        assertEquals(day.part1(), 254575)
-    }
-
-    @Test
+    @TestFactory
     @DisplayName("Part 2")
-    fun part2() {
-        val day = Day04()
+    fun part2() = test(
+        function = day::part2,
+        answer = 1038736,
+        data = listOf(
 
-        assertEquals(day.part2(), 1038736)
-    }
+        )
+    )
 }

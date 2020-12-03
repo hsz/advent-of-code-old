@@ -1,37 +1,37 @@
 package mobi.hsz.adventofcode.aoc2020
 
-import org.junit.jupiter.api.Assertions.assertEquals
+import mobi.hsz.adventofcode.DayTest
 import org.junit.jupiter.api.DisplayName
-import org.junit.jupiter.api.Test
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.ValueSource
+import org.junit.jupiter.api.TestFactory
 
 @DisplayName("Advent of Code 2020, Day 2: Password Philosophy")
-class Day02Test {
+class Day02Test : DayTest(Day02()) {
 
-    @ParameterizedTest
-    @ValueSource(
-        strings = [
-            "1-3 a: abcde\n1-3 b: cdefg\n2-9 c: ccccccccc",
-        ]
-    )
+    @TestFactory
     @DisplayName("Part 1")
-    fun part1(input: String) = assertEquals(2, Day02().part1(input))
-
-    @Test
-    @DisplayName("Part 1 - Solution")
-    fun part1Solution() = assertEquals(398, Day02().part1())
-
-    @ParameterizedTest
-    @ValueSource(
-        strings = [
-            "1-3 a: abcde\n1-3 b: cdefg\n2-9 c: ccccccccc",
-        ]
+    fun part1() = test(
+        function = day::part1,
+        answer = 398,
+        data = listOf(
+            """
+                1-3 a: abcde
+                1-3 b: cdefg
+                2-9 c: ccccccccc
+            """ to 2,
+        )
     )
-    @DisplayName("Part 2")
-    fun part2(input: String) = assertEquals(1, Day02().part2(input))
 
-    @Test
-    @DisplayName("Part 2 - Solution")
-    fun part2Solution() = assertEquals(562, Day02().part2())
+    @TestFactory
+    @DisplayName("Part 2")
+    fun part2() = test(
+        function = day::part2,
+        answer = 562,
+        data = listOf(
+            """
+                1-3 a: abcde
+                1-3 b: cdefg
+                2-9 c: ccccccccc
+            """.trimIndent() to 1,
+        )
+    )
 }

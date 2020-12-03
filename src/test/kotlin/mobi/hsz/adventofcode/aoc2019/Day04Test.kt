@@ -1,33 +1,33 @@
 package mobi.hsz.adventofcode.aoc2019
 
+import mobi.hsz.adventofcode.DayTest
 import org.junit.jupiter.api.DisplayName
-import kotlin.test.Test
-import kotlin.test.assertEquals
+import org.junit.jupiter.api.TestFactory
 
 @DisplayName("Advent of Code 2019, Day 4: Secure Container")
-class Day04Test {
+class Day04Test : DayTest(Day04()) {
 
-    @Test
+    @TestFactory
     @DisplayName("Part 1")
-    fun part1() {
-        val day = Day04()
+    fun part1() = test(
+        function = day::part1,
+        answer = 1246,
+        data = listOf(
+            "111111-111111" to 1,
+            "223450-223450" to 0,
+            "123789-123789" to 0,
+        )
+    )
 
-        assertEquals(day.part1("111111-111111"), 1)
-        assertEquals(day.part1("223450-223450"), 0)
-        assertEquals(day.part1("123789-123789"), 0)
-
-        assertEquals(day.part1(), 1246)
-    }
-
-    @Test
+    @TestFactory
     @DisplayName("Part 2")
-    fun part2() {
-        val day = Day04()
-
-        assertEquals(day.part2("112233-112233"), 1)
-        assertEquals(day.part2("123444-123444"), 0)
-        assertEquals(day.part2("111122-111122"), 1)
-
-        assertEquals(day.part2(), 814)
-    }
+    fun part2() = test(
+        function = day::part2,
+        answer = 814,
+        data = listOf(
+            "112233-112233" to 1,
+            "123444-123444" to 0,
+            "111122-111122" to 1,
+        )
+    )
 }

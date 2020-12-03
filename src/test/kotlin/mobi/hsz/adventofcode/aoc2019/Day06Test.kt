@@ -1,61 +1,55 @@
 package mobi.hsz.adventofcode.aoc2019
 
+import mobi.hsz.adventofcode.DayTest
 import org.junit.jupiter.api.DisplayName
-import kotlin.test.Test
-import kotlin.test.assertEquals
+import org.junit.jupiter.api.TestFactory
 
 @DisplayName("Advent of Code 2019, Day 6: Universal Orbit Map")
-class Day06Test {
+class Day06Test : DayTest(Day06()) {
 
-    @Test
+    @TestFactory
     @DisplayName("Part 1")
-    fun part1() {
-        val day = Day06()
-
-        assertEquals(
-            day.part1(
-                "COM)B\n" +
-                    "B)C\n" +
-                    "C)D\n" +
-                    "D)E\n" +
-                    "E)F\n" +
-                    "B)G\n" +
-                    "G)H\n" +
-                    "D)I\n" +
-                    "E)J\n" +
-                    "J)K\n" +
-                    "K)L"
-            ),
-            42
+    fun part1() = test(
+        function = day::part1,
+        answer = 106065,
+        data = listOf(
+            """
+                COM)B
+                B)C
+                C)D
+                D)E
+                E)F
+                B)G
+                G)H
+                D)I
+                E)J
+                J)K
+                K)L
+            """ to 42
         )
+    )
 
-        assertEquals(day.part1(), 106065)
-    }
-
-    @Test
+    @TestFactory
     @DisplayName("Part 2")
-    fun part2() {
-        val day = Day06()
-
-        assertEquals(
-            day.part2(
-                "COM)B\n" +
-                    "B)C\n" +
-                    "C)D\n" +
-                    "D)E\n" +
-                    "E)F\n" +
-                    "B)G\n" +
-                    "G)H\n" +
-                    "D)I\n" +
-                    "E)J\n" +
-                    "J)K\n" +
-                    "K)L\n" +
-                    "K)YOU\n" +
-                    "I)SAN"
-            ),
-            4
+    fun part2() = test(
+        function = day::part2,
+        answer = 253,
+        data = listOf(
+            """
+                COM)B
+                B)C
+                C)D
+                D)E
+                E)F
+                B)G
+                G)H
+                D)I
+                E)J
+                J)K
+                K)L
+                K)YOU
+                I)SAN
+            """ to 4
         )
-
-        assertEquals(day.part2(), 253)
-    }
+    )
 }
