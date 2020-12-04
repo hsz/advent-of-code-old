@@ -4,8 +4,8 @@ import mobi.hsz.adventofcode.DayTest
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.TestFactory
 
-@DisplayName("Advent of Code 2019, Day 3: Toboggan Trajectory")
-class Day0Test : DayTest(Day03()) {
+@DisplayName("Advent of Code 2020, Day 3: Toboggan Trajectory")
+class Day03Test : DayTest(Day03()) {
 
     @TestFactory
     @DisplayName("Part 1")
