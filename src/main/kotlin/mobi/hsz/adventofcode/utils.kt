@@ -31,6 +31,11 @@ fun <T> Iterable<T>.permutation() = (this to this).permutation()
 fun String.md5(): String = BigInteger(1, MessageDigest.getInstance("MD5").digest(toByteArray())).toString(16)
 
 /**
+ * Shorthand for [String.toInt].
+ */
+operator fun String.unaryPlus() = toInt()
+
+/**
  * Sums two pairs of integer values.
  */
 operator fun Pair<Int, Int>.plus(p: Pair<Int, Int>) = first + p.first to second + p.second

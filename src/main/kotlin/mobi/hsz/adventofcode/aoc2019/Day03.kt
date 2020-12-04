@@ -2,6 +2,7 @@ package mobi.hsz.adventofcode.aoc2019
 
 import mobi.hsz.adventofcode.Day
 import mobi.hsz.adventofcode.permutation
+import mobi.hsz.adventofcode.unaryPlus
 import kotlin.math.absoluteValue
 
 /**
@@ -24,7 +25,7 @@ class Day03 : Day(2019, 3) {
     private fun process(input: String) = input.lines().map {
         it.split(',').fold(listOf(0 to 0)) { grid, it1 ->
             val (x, y) = grid.last()
-            val num = it1.substring(1).toInt()
+            val num = +it1.substring(1)
 
             grid + when (it1.first()) {
                 'R' -> ((x + 1)..(x + num)) to y..y

@@ -2,6 +2,7 @@ package mobi.hsz.adventofcode.aoc2020
 
 import mobi.hsz.adventofcode.Day
 import mobi.hsz.adventofcode.mapper
+import mobi.hsz.adventofcode.unaryPlus
 
 /**
  * Advent of Code 2020
@@ -14,13 +15,13 @@ class Day04 : Day(2020, 4) {
 
     val map = mapper(
         { true },
-        "byr" to { v: String -> (1920..2002).contains(v.toInt()) },
-        "iyr" to { v: String -> (2010..2020).contains(v.toInt()) },
-        "eyr" to { v: String -> (2020..2030).contains(v.toInt()) },
+        "byr" to { v: String -> (1920..2002).contains(+v) },
+        "iyr" to { v: String -> (2010..2020).contains(+v) },
+        "eyr" to { v: String -> (2020..2030).contains(+v) },
         "hgt" to { v: String ->
-            when (val suffix = v.takeLast(2)) {
-                "cm" -> (150..193).contains(v.removeSuffix(suffix).toInt())
-                "in" -> (59..76).contains(v.removeSuffix(suffix).toInt())
+            when (v.takeLast(2)) {
+                "cm" -> (150..193).contains(+v.dropLast(2))
+                "in" -> (59..76).contains(+v.dropLast(2))
                 else -> false
             }
         },
