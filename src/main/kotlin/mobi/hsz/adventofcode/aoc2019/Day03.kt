@@ -14,15 +14,15 @@ import kotlin.math.absoluteValue
  */
 class Day03 : Day(2019, 3) {
 
-    override fun part1(input: String) = process(input).let { (a, b) ->
+    override fun part1(input: String) = input.process().let { (a, b) ->
         a.intersect(b).map { it.first.absoluteValue + it.second.absoluteValue }.filter { it > 0 }.minOrNull()!!
     }
 
-    override fun part2(input: String) = process(input).let { (a, b) ->
+    override fun part2(input: String) = input.process().let { (a, b) ->
         a.intersect(b).map { a.indexOf(it) + b.indexOf(it) + 2 }.minOrNull()!!
     }
 
-    private fun process(input: String) = input.lines().map {
+    private fun String.process() = lines().map {
         it.split(',').fold(listOf(0 to 0)) { grid, it1 ->
             val (x, y) = grid.last()
             val num = +it1.substring(1)

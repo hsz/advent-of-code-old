@@ -14,11 +14,11 @@ class Day05 : Day(2015, 5) {
 
     val map = mapper(0, true to 1)
 
-    override fun part1(input: String) = process(input, """(.)\1""", """([aeiou].*){3}""", """^((?!ab|cd|pq|xy).)*$""")
+    override fun part1(input: String) = input.process("""(.)\1""", """([aeiou].*){3}""", """^((?!ab|cd|pq|xy).)*$""")
 
-    override fun part2(input: String) = process(input, """(..).*\1""", """(.).\1""")
+    override fun part2(input: String) = input.process("""(..).*\1""", """(.).\1""")
 
-    private fun process(input: String, vararg patterns: String) = input.lines().sumBy {
+    private fun String.process(vararg patterns: String) = lines().sumBy {
         map(patterns.fold(true) { acc, v -> acc && v.toRegex().containsMatchIn(it) })
     }
 }

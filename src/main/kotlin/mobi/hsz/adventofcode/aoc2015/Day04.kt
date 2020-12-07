@@ -13,9 +13,9 @@ import mobi.hsz.adventofcode.md5
  */
 class Day04 : Day(2015, 4) {
 
-    override fun part1(input: String) = process(input, 5)
+    override fun part1(input: String) = input.process(5)
 
-    override fun part2(input: String) = process(input, 6)
+    override fun part2(input: String) = input.process(6)
 
-    private fun process(input: String, zeros: Int) = generateUntil { "$input${it}".md5().length > 32 - zeros }
+    private fun String.process(zeros: Int) = generateUntil { "$this${it}".md5().length > 32 - zeros }
 }
